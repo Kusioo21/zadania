@@ -4,19 +4,11 @@ class Program
 {
     static void Main()
     {
-        int[] liczby = { 12, 7, 45, -3, 22 };
-        int maks = liczby[0];
-        int min = liczby[0];
+        string[] imiona = { "Kasia", "Marek", "Ola", "Piotr", "Ania" };
 
-        for (int i = 1; i < liczby.Length; i++)
+        for (int i = imiona.Length - 1; i >= 0; i--)
         {
-            if (liczby[i] > maks)
-                maks = liczby[i];
-            if (liczby[i] < min)
-                min = liczby[i];
+            Console.WriteLine(imiona[i]);
         }
-
-        Console.WriteLine("Największy element: " + maks);
-        Console.WriteLine("Najmniejszy element: " + min);
     }
 }
