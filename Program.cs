@@ -4,11 +4,20 @@ class Program
 {
     static void Main()
     {
-        string[] imiona = { "Kasia", "Marek", "Ola", "Piotr", "Ania" };
+        int[] liczby = { 12, 7, 4, 19, 22, 33, 8 };
 
-        for (int i = imiona.Length - 1; i >= 0; i--)
+        int parzyste = 0;
+        int nieparzyste = 0;
+
+        foreach (int liczba in liczby)
         {
-            Console.WriteLine(imiona[i]);
+            if (liczba % 2 == 0)
+                parzyste++;
+            else
+                nieparzyste++;
         }
+
+        Console.WriteLine("Liczb parzystych: " + parzyste);
+        Console.WriteLine("Liczb nieparzystych: " + nieparzyste);
     }
 }
